@@ -2,4 +2,4 @@ dist
 env
 tradont.egg-info
 **/__pycache__
-
+test.py
