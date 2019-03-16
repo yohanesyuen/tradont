@@ -23,9 +23,15 @@ Base = declarative_base()
 
 from tradont.model.Currency import Currency
 from tradont.model.CurrencyPair import CurrencyPair
+from tradont.model.ConversionFactor import ConversionFactor
 
 Base.metadata.create_all(engine)
-DBSession = sessionmaker(bind=engine)
-session = DBSession()
+Session = sessionmaker(bind=engine)
 
+__all__ = [
+        'Base',
+        'Currency',
+        'CurrencyPair',
+        'ConversionFactor',
+        'Session']
 

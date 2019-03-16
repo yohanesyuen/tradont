@@ -13,7 +13,7 @@ class CurrencyPair(Base):
     base_ccy = relationship('Currency', foreign_keys=[base_ccy_id])
     quote_ccy_id = Column(Integer, ForeignKey('currencies.id'))
     quote_ccy = relationship('Currency', foreign_keys=[quote_ccy_id])
-    pipLocation = Column(Integer, nullable=False)
-    displayPrecision = Column(Integer, nullable=False)
-    marginRate = Column(DECIMAL(10,5), nullable=False)
+    pip_location = Column(Integer, nullable=False)
+    display_precision = Column(Integer, nullable=False)
+    margin_rate = Column(DECIMAL(10,5), nullable=False)
 
