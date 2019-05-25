@@ -69,7 +69,7 @@ class Config(object):
 
         with open(path, "w") as f:
             print(self, file=f)
-    
+
     def load_db_config(self,config_dict):
         for k, v in config_dict.items():
             if k in self.db_config:
@@ -87,7 +87,7 @@ class Config(object):
 
         try:
             with open(os.path.expanduser(path)) as f:
-                y = yaml.load(f)
+                y = yaml.load(f, Loader=yaml.FullLoader)
                 for k,v in y.items():
                     if k == 'db_config':
                         self.load_db_config(v)
