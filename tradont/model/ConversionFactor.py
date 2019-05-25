@@ -14,3 +14,7 @@ class ConversionFactor(Base):
     positive_units = Column(DECIMAL(10,5), nullable=False)
     negative_units = Column(DECIMAL(10,5), nullable=False)
 
+    def __repr__(self):
+        return '<ConversionFactor(id={}, symbol_id={}, symbol={}, pos={}, neg={})>'\
+            .format(self.id, self.symbol_id, self.symbol.name, self.positive_units,\
+                    self.negative_units)
